@@ -7,6 +7,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.Executors;
@@ -77,7 +78,7 @@ public class PushCameraStreamByFFmpeg implements ApplicationRunner {
      * 获取ffmpeg.exe的路径
      * @return
      */
-    private String getFFmpegPath(){
+    private String getFFmpegPath() throws IOException {
         String os = null;
         String osName = System.getProperties().getProperty("os.name");
         System.out.println("current system :"+osName);
