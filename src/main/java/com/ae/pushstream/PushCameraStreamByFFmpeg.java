@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
@@ -81,6 +80,7 @@ public class PushCameraStreamByFFmpeg implements ApplicationRunner {
     private String getFFmpegPath(){
         String os = null;
         String osName = System.getProperties().getProperty("os.name");
+        System.out.println("current system :"+osName);
         if(osName.contains("Windows")){
             os = "win";
         }else if(osName.contains("Linux")){
