@@ -1,0 +1,18 @@
+# 应用名称
+spring:
+  application:
+    name: java-push-stream-by-ffmpeg
+
+# 应用服务 WEB 访问端口
+server:
+  port: 8080
+
+#=================================================
+#源地址和目标地址
+ae:
+  url:
+    sourceAddress: rtsp://admin:zd199611@192.168.0.109:554/h264/1/main/av_stream
+    targetAddress: rtmp://192.168.145.201:1935/live/livestream
+  resources:
+    ffmpegPath: ffmpeg
+
